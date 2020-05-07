@@ -469,7 +469,7 @@ date_time date_time::reverse_day_of_year(u16 year, u16 day_of_year) {
 }
 
 time_t date_time::mktime() const {
-    tm t;
+    tm t{};
 
     t.tm_year = year() - 1900;
     t.tm_mon = month() - 1;
